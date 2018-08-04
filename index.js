@@ -73,7 +73,7 @@ if (global.gc) {
 }
 
 function generateEmbedHTML(embed, id) {
-  return `<!DOCTYPE html><html><head>${embed.title ? `<meta property="og:title" content="${htmlEncode(embed.title)}">` : ""}${embed.description ? `<meta property="og:description" content="${htmlEncode(embed.description)}">` : ""}${embed.image ? `<meta property="og:image" content="${htmlEncode(embed.image)}">` : ""}${embed.siteName ? `<meta property="og:site_name" content="${htmlEncode(embed.siteName)}">` : ""}${embed.color ? `<meta name="theme-color" content="#${embed.color}">` : ""}${id ? `<link type="application/json+oembed" href="${WEBSITE_ROOT_URL}/oembed/${id}.json">` : ""}</head><body><script>location="/"</script></body></html>`;
+  return `<!DOCTYPE html><html><head>${embed.title ? `<meta property="og:title" content="${htmlEncode(embed.title)}">` : ""}${embed.description ? `<meta property="og:description" content="${htmlEncode(embed.description)}">` : ""}${embed.image ? `<meta property="og:video" content="${htmlEncode(embed.image)}">` : ""}${embed.siteName ? `<meta property="og:site_name" content="${htmlEncode(embed.siteName)}">` : ""}${embed.color ? `<meta name="theme-color" content="#${embed.color}">` : ""}${id ? `<link type="application/json+oembed" href="${WEBSITE_ROOT_URL}/oembed/${id}.json">` : ""}</head><body><script>location="/"</script></body></html>`;
 }
 
 // https://lowrey.me/encoding-decoding-base-62-in-es6-javascript/
